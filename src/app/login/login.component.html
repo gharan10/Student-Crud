@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h2>Login</h2><hr>
+                </div>
+
+
+
+
+
+                <form [formGroup]="loginform" (ngSubmit)="login()">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <small *ngIf="loginform.get('email')?.invalid && loginform.get('email')?.touched" class="text-danger" style="font-weight: 500;">Email is required!</small>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+                      <small *ngIf="loginform.get('password')?.invalid && loginform.get('password')?.touched" class="text-danger" style="font-weight: 500;">Password is required!</small>
+                    </div>
+                    <button type="submit" class="btn btn-light" [disabled]="loginform.invalid">Login</button>
+                  </form>
+                    <br>
+
+                    <span>New user?  <a style="color: black; margin-top: 10px; text-decoration: none;" routerLink="/signup">signup</a></span>
+            </div>
+        </div>
+    </div>
+</div>

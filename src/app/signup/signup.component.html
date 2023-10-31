@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h2>Signup</h2><hr>
+                </div>
+
+
+
+
+
+                <form [formGroup]="signupform" (ngSubmit)="signup()">
+                    <div class="mb-2">
+                        <label for="exampleInputEmail1" class="form-label">Name</label>
+                        <input type="name" formControlName="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <small *ngIf="signupform.get('name')?.invalid && signupform.get('name')?.touched" class="text-danger" style="font-weight: 500;">Name is required!</small>
+                      </div>
+                      <div class="mb-2">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <small *ngIf="signupform.get('email')?.invalid && signupform.get('email')?.touched" class="text-danger" style="font-weight: 500;">Email is required!</small>
+                      </div>
+                    <div class="mb-2">
+                      <label for="exampleInputEmail1" class="form-label">Mobile No</label>
+                      <input type="tel" formControlName="mobile" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" maxlength="10">
+                      <small *ngIf="signupform.get('mobile')?.invalid && signupform.get('mobile')?.touched" class="text-danger" style="font-weight: 500;">Mobile No is required!</small>
+                    </div>
+                    <div class="mb-2">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+                      <small *ngIf="signupform.get('password')?.invalid && signupform.get('password')?.touched" class="text-danger" style="font-weight: 500;">Password is required!</small>
+                    </div>
+                    <button type="submit" class="btn btn-light" [disabled]="signupform.invalid">Signup</button>
+                  </form>
+                    <br>
+
+                    <span>Already Registered?  <a style="color: black; margin-top: 10px; text-decoration: none;" routerLink="/login">login</a></span>
+            </div>
+        </div>
+    </div>
+</div>

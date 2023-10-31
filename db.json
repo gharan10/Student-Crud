@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "guru",
+      "email": "guru@gmail.com",
+      "mobile": "4587996487",
+      "city": "tnj"
+    },
+    {
+      "id": 2,
+      "name": "karthi",
+      "email": "karthi@gmail.com",
+      "mobile": "9465328452",
+      "city": "tnj"
+    }
+  ],
+  "signup": [
+    {
+      "name": "guru",
+      "email": "guru1@gmail.com",
+      "mobile": "2345678943",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "name": "karthi",
+      "email": "karthi15@gmail.com",
+      "mobile": "9565984655",
+      "password": "12345",
+      "id": 2
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
